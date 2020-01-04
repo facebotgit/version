@@ -62,8 +62,8 @@ function genXml(key)
         <product code="${key}"></product>
     </license>`;
 
-    var file = download('LICENÇA.xml', xml);
-    const ref = firebase.storage().ref('/' + key + '/LICENÇA.xml');
+    var file = download('LICENSE.xml', xml);
+    const ref = firebase.storage().ref('/' + key + '/LICENSE.xml');
     return ref.put(file);
 }
 
