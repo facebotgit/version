@@ -4,7 +4,7 @@
 <license>
     <company name="TopMotors"></company>
     <user name="nome-de-usuario" email="user-email"></user>
-    <product code="PRODUCT CODE"></product>
+    <product key="PRODUCT CODE"></product>
 </license>
 
 */
@@ -59,7 +59,7 @@ function genXml(key)
     <license>
         <company name="${company.value}"></company>
         <user name="${userName.value}" email="${userEmail.value}"></user>
-        <product code="${key}"></product>
+        <product key="${key}"></product>
     </license>`;
 
     var file = download('LICENSE.xml', xml);
