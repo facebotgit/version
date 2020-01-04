@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <title>REGISTRAR</title>
+</head>
+<body>
+    <center>
+        <div class="center">
+            <h1>Registar APP/Gerar Licença</h1>
+            <input type="email" class="input-text" placeholder="Login (admin)" id="login">
+            <input type="password" class="input-text" placeholder="Senha (admin)" id="pass">
+            <hr>
+            <input type="text" class="input-text" placeholder="Empresa" id="company">
+            <input type="text" class="input-text" placeholder="Nome (usuário)" id="usrname">
+            <input type="email" class="input-text" placeholder="Email (usuário)" id="usremail">
+            <input type="text" class="input-text" placeholder="Chave de ativação (gerada automaticamente)" id="productKey" readonly="true">
+            <hr><button class="btn btn-primary" onclick="GenerateLicense();">Gerar licença</button>
+        </div>
+    </center>
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCkg3BHtFBmXU0QtEivY-_AURqHApIxct8",
+    authDomain: "softwarelicense-2k20.firebaseapp.com",
+    databaseURL: "https://softwarelicense-2k20.firebaseio.com",
+    projectId: "softwarelicense-2k20",
+    storageBucket: "softwarelicense-2k20.appspot.com",
+    messagingSenderId: "563253861057",
+    appId: "1:563253861057:web:d593d62b4b7d84f5f35240"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="index.js"></script>
+</html>
