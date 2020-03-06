@@ -16,25 +16,27 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <title>REGISTRAR</title>
+    <title>Consulta</title>
+    <center>
+        <br>
+        <h2>Login (Admin)</h2>
+        <input type="email" class="input-text" placeholder="Login (admin)" id="login">
+        <input type="password" class="input-text" placeholder="Senha (admin)" id="pass">
+        <button onclick="logIn();">Login</button>
+        <button onclick="signOut();">Logout</button>
+        <hr>
+        <input id="toSearch" type="text" placeholder="Procurar"><br>
+        <button onclick="pkey()">Consultar <b>ProductKey</b></button><br>
+        <button onclick="uname()">Consultar <b>UserName</b></button><br>
+        <button onclick="uemail()">Consultar <b>UserEmail</b></button><br>
+        <button onclick="company()">Consultar <b>Company</b></button>
+        <button onclick="downloadLicense()">Baixar licença <b>ProductKey</b></button>
+        <hr>
+        <div id="result"></div>
+    </center>
 </head>
 <body>
-    <center>
-        <div class="center">
-            <h1>Registar APP/Gerar Licença</h1>
-            <input type="email" class="input-text" placeholder="Login (admin)" id="login">
-            <input type="password" class="input-text" placeholder="Senha (admin)" id="pass">
-            <hr>
-            <input type="text" class="input-text" placeholder="Empresa" id="company">
-            <input type="text" class="input-text" placeholder="Nome (usuário)" id="usrname">
-            <input type="email" class="input-text" placeholder="Email (usuário)" id="usremail">
-            <input type="text" class="input-text" placeholder="Chave de ativação (gerada automaticamente)" id="productKey" readonly="true">
-            <hr><button class="btn btn-primary" onclick="GenerateLicense();">Gerar licença</button>
-        </div>
-        <br>
-        <hr>
-        <a href="/consulta.html">Consultar dados</a>
-    </center>
+    
 </body>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
@@ -60,5 +62,5 @@
   firebase.initializeApp(firebaseConfig);
 </script>
 <script src="firebase_src.js"></script>
-<script src="index.js"></script>
+<script src="consulta.js"></script>
 </html>

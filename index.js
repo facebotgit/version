@@ -24,11 +24,6 @@ async function sha256(message) {
     return hashHex;
 }
 
-function $(s){return document.querySelector(s);}
-
-const login = $('#login');
-const password = $('#pass');
-
 const company = $('#company');
 const userName = $('#usrname');
 const userEmail = $('#usremail');
@@ -67,22 +62,22 @@ function genXml(key)
     return ref.put(file);
 }
 
-function signOut(){
-    return firebase.auth().signOut();
+function clearStr(str)
+{
+    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, "")
 }
 
 function GenerateLicense(){
 
-    firebase.auth().signInWithEmailAndPassword(login.value, password.value)
-    .catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        alert('Login(admin) incorreto!\n' + errorMessage);
-      });
+    logIn();
 
       firebase.auth().onAuthStateChanged(async function(user) {
         if (user) {
+            
+            company.value = clearStr(company.value);
+            userName.value = clearStr(userName.value);
+            userEmail.value = clearStr(userEmail.value);
+
             var key = await sha256(company.value + '\n' + userName.value + '\n' + userEmail.value);
             console.log(key);
             firebase.database().ref('license/' + key).set({
