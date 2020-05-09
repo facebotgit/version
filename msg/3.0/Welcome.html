@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceBOT 3.0</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<script>
+    function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+</script>
+<body class="text-center">
+    <style>
+        .img-swal
+        {
+            border-radius: 14px;
+            box-shadow: 4px 4px 6px gray;
+        }
+        .niceui 
+        {
+            font-weight: normal;
+            font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+        }
+
+    </style>
+    <div class="jumbotron text-center">
+        <h1>FaceBOT 3.0</h1>
+        <hr>
+        <h3>Confira detalhes da atualização</h3>
+    </div>
+    <br>
+
+    <h1>Sistema de relatórios adicionado</h1>
+    <hr>
+    <div class="container">
+        <h3 class="niceui">Verifique detalhes da publicação</h3>
+    </div>
+    <br>
+    <img src="relatorio.png"><br><br>
+    <p><b>Vefifique em que grupos o anúncio foi publicado,<br>
+        verifique se foi publicado com sucesso, entre outros detalhes.</b>
+    </p>
+    <p>
+        Após os anúncios serem publicados, aparecerá uma mensagem como essa:
+    </p>
+    <img src="ver_relatorio.png"><br><br>
+    <p>
+        Clique "Sim" se desejar ver o relatório.
+    </p>
+    <br><br>
+
+    <hr>
+    <div class="contato">
+        <h2>Contato</h2>
+        <a href="mailto:facebot.email@gmail.com" target="_blank">Mandar um email</a><br>
+        <p>(facebot.email@gmail.com)</p>
+        <br>
+    </div>
+</body>
+<script>
+    if (getParameterByName("version") != "3.0") {
+    alert("Você não está usando a versão 3.0!\n"+
+    "Para ter acesso à esses recursos, atualize o FaceBOT!");
+}
+
+</script>
+</html>
