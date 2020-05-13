@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você não fez a pesquisa!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<script>
+"use strict";
+
+function wclose() {
+  window.close();
+  window.setTimeout(function () {
+    alert('Feche a janela do navegador!');
+  }, 100);
+}
+</script>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-3 text-center">Pesquisa de Feedback</h1>
+        </div>
+    </div>
+    <div class="text-center">
+        <h3>
+            Olá, <span id="username">usuário</span>, você não fez a pesquisa.
+            <br> Deseja fazer?
+        </h3>
+        <hr>
+        <a href="./index.html">
+            <button class="btn btn-primary btn-lg">&nbsp;Sim, quero fazer a pesquisa!&nbsp;</button>
+        </a>
+        <button class="btn btn-outline-danger btn-lg btn-outline" onclick="wclose();">&nbsp;Não, não perguntar novamente&nbsp;</button>
+        <br><br>
+        <p><b>⏱ A pesquisa leva menos de 5 minutos!</b></p>
+        <hr>
+        <h4>Por que fazer a pesquisa?</h4>
+        <h5>A pesquisa ajuda a equipe de desenvolvimento saber no que precisa melhorar!</h5>
+        <p>Assim, os desenvolvedores saberão o que deve ser mudado no FaceBOT!</p>
+    </div>
+    
+</body>
+<script>
+"use strict";
+
+function getParameterByName(name, url) {
+  if (!url) url = window.location.href;
+  name = name.replace(/[\[\]]/g, '\\$&');
+  var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+      results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+var user = getParameterByName('user');
+
+if (user != null && user.length > 0) {
+  user = user.substring(0, 1).toUpperCase() + user.substring(1);
+  document.getElementById('username').innerHTML = user;
+}
+
+</script>
+</html>
