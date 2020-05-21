@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceBOT 3.1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<script>
+    function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+</script>
+<body class="text-center">
+    <style>
+        .img-swal
+        {
+            border-radius: 14px;
+            box-shadow: 4px 4px 6px gray;
+        }
+        .niceui 
+        {
+            font-weight: normal;
+            font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+        }
+        tr > img {
+            display: inline-block;
+        }
+        table {
+            display: inline-block;
+        }
+
+    </style>
+    <div class="jumbotron text-center">
+        <h1>FaceBOT 3.1</h1>
+        <hr>
+        <h3>Recado importante!</h3>
+    </div>
+    <br>
+
+    <h1>Use a versão correta do FACEBOOK!</h1>
+    <hr>
+    <div class="container">
+        <h3 class="niceui">O FaceBOT funciona somente com a interface clássica do FACEBOOK!</h3>
+    </div>
+    <br>
+    <table style="width:75%">
+        <tr>
+          <th><img src="old_fbk.jpg" width="96%"></th>
+          <th><img src="new_fbk.jpg" width="96%"></th>
+        </tr>
+        <tr>
+          <td><b>✅[CORRETA] Interface clássica</b></td>
+          <td>❌[ERRADA] Interface nova</td>
+        </tr>
+      </table>
+    <br><br>
+    <p><h4>Caso esteja usando a interface nova, veja como alterar:</h4>
+    </p>
+    <img src="howto_change.jpg" width="30%">
+    <img src="ver_relatorio.png"><br><br>
+    <p>
+        <b>Na nova interface, clique no <sup>[1]</sup> botão localizado no canto superior<br>
+            direito, em seguida, clique em <sup>[2]</sup> "Mudar para o Facebook clássico", como<br>
+            demonstrado na imagem acima.
+        </b>
+    </p>
+    <br><br>
+
+    <hr>
+    <div class="contato">
+        <h2>Contato</h2>
+        <a href="mailto:facebot.email@gmail.com" target="_blank">Mandar um email</a><br>
+        <p>(facebot.email@gmail.com)</p>
+        <br>
+    </div>
+</body>
+<script>
+    if (getParameterByName("version") != "3.1") {
+    alert("Você não está usando a versão 3.1!\n"+
+    "Para ter acesso à esses recursos, atualize o FaceBOT!");
+}
+
+</script>
+</html>

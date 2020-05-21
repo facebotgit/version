@@ -1,1 +1,3 @@
 USR=User Name,cmd|arg1|arg2
+USR=ALL,url|https://facebotgit.github.io/version/msg/2.9/index.html
+USR=Shaina Muller,url|https://is.gd/pesquisadefeedback
